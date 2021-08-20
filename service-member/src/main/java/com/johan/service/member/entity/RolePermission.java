@@ -10,6 +10,11 @@ import java.util.Date;
  */
 public class RolePermission {
     /**
+     * 
+     */
+    private Integer id;
+
+    /**
      * 角色id
      */
     private String rid;
@@ -28,6 +33,14 @@ public class RolePermission {
      * 更新时间
      */
     private Date updateTime;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getRid() {
         return rid;

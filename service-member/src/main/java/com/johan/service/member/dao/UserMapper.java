@@ -1,7 +1,9 @@
 package com.johan.service.member.dao;
 
 import com.johan.service.member.entity.User;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserMapper {
     int deleteByPrimaryKey(String uid);
 

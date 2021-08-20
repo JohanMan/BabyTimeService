@@ -1,7 +1,9 @@
 package com.johan.service.member.dao;
 
 import com.johan.service.member.entity.Permission;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface PermissionMapper {
     int deleteByPrimaryKey(String pid);
 

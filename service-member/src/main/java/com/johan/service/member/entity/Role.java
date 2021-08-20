@@ -15,14 +15,14 @@ public class Role {
     private String rid;
 
     /**
-     * 等级
+     * 角色等级
      */
-    private Byte level;
+    private Byte roleLevel;
 
     /**
-     * 名称
+     * 角色名称
      */
-    private String name;
+    private String roleName;
 
     /**
      * 创建时间
@@ -42,20 +42,20 @@ public class Role {
         this.rid = rid == null ? null : rid.trim();
     }
 
-    public Byte getLevel() {
-        return level;
+    public Byte getRoleLevel() {
+        return roleLevel;
     }
 
-    public void setLevel(Byte level) {
-        this.level = level;
+    public void setRoleLevel(Byte roleLevel) {
+        this.roleLevel = roleLevel;
     }
 
-    public String getName() {
-        return name;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setRoleName(String roleName) {
+        this.roleName = roleName == null ? null : roleName.trim();
     }
 
     public Date getCreateTime() {

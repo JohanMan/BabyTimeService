@@ -1,7 +1,9 @@
 package com.johan.service.member.dao;
 
 import com.johan.service.member.entity.Role;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface RoleMapper {
     int deleteByPrimaryKey(String rid);
 

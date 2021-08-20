@@ -15,9 +15,9 @@ public class Permission {
     private String pid;
 
     /**
-     * 名称
+     * 权限名称
      */
-    private String name;
+    private String permissionName;
 
     /**
      * 地址
@@ -42,12 +42,12 @@ public class Permission {
         this.pid = pid == null ? null : pid.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getPermissionName() {
+        return permissionName;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setPermissionName(String permissionName) {
+        this.permissionName = permissionName == null ? null : permissionName.trim();
     }
 
     public String getUrl() {

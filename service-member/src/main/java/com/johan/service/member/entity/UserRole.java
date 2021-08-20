@@ -10,6 +10,11 @@ import java.util.Date;
  */
 public class UserRole {
     /**
+     * 
+     */
+    private Integer id;
+
+    /**
      * 用户id
      */
     private String uid;
@@ -28,6 +33,14 @@ public class UserRole {
      * 更新时间
      */
     private Date updateTime;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getUid() {
         return uid;
