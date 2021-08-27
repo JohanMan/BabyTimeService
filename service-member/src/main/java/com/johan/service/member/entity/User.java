@@ -6,7 +6,7 @@ import java.util.Date;
  * 用户表
  *
  * @author Johan
- * @date 2021/08/20
+ * @date 2021/08/27
  */
 public class User {
     /**

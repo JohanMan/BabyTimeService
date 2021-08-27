@@ -6,13 +6,13 @@ import java.util.Date;
  * 角色表
  *
  * @author Johan
- * @date 2021/08/20
+ * @date 2021/08/27
  */
 public class Role {
     /**
      * 角色id
      */
-    private String rid;
+    private Integer rid;
 
     /**
      * 角色等级
@@ -34,12 +34,12 @@ public class Role {
      */
     private Date updateTime;
 
-    public String getRid() {
+    public Integer getRid() {
         return rid;
     }
 
-    public void setRid(String rid) {
-        this.rid = rid == null ? null : rid.trim();
+    public void setRid(Integer rid) {
+        this.rid = rid;
     }
 
     public Byte getRoleLevel() {

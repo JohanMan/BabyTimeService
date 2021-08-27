@@ -5,13 +5,13 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RoleMapper {
-    int deleteByPrimaryKey(String rid);
+    int deleteByPrimaryKey(Integer rid);
 
     int insert(Role record);
 
     int insertSelective(Role record);
 
-    Role selectByPrimaryKey(String rid);
+    Role selectByPrimaryKey(Integer rid);
 
     int updateByPrimaryKeySelective(Role record);
 

@@ -5,13 +5,13 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRoleMapper {
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(String id);
 
     int insert(UserRole record);
 
     int insertSelective(UserRole record);
 
-    UserRole selectByPrimaryKey(Integer id);
+    UserRole selectByPrimaryKey(String id);
 
     int updateByPrimaryKeySelective(UserRole record);
 

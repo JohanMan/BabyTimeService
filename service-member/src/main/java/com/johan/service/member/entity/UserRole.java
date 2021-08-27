@@ -6,13 +6,13 @@ import java.util.Date;
  * 用户角色表
  *
  * @author Johan
- * @date 2021/08/20
+ * @date 2021/08/27
  */
 public class UserRole {
     /**
-     * 
+     * id
      */
-    private Integer id;
+    private String id;
 
     /**
      * 用户id
@@ -22,7 +22,7 @@ public class UserRole {
     /**
      * 角色id
      */
-    private String rid;
+    private Integer rid;
 
     /**
      * 创建时间
@@ -34,12 +34,12 @@ public class UserRole {
      */
     private Date updateTime;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
     }
 
     public String getUid() {
@@ -50,12 +50,12 @@ public class UserRole {
         this.uid = uid == null ? null : uid.trim();
     }
 
-    public String getRid() {
+    public Integer getRid() {
         return rid;
     }
 
-    public void setRid(String rid) {
-        this.rid = rid == null ? null : rid.trim();
+    public void setRid(Integer rid) {
+        this.rid = rid;
     }
 
     public Date getCreateTime() {
