@@ -23,11 +23,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private SnowFlake snowFlake;
 
+    @Transactional
     @Override
     public void insertBgAdmin(User user) {
         insert(user, RoleService.ROLE_BG_ADMIN);
     }
 
+    @Transactional
     @Override
     public void insertUser(User user) {
         insert(user, RoleService.ROLE_USER);

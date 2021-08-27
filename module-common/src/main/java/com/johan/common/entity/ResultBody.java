@@ -57,4 +57,16 @@ public class ResultBody {
         return body;
     }
 
+    public int getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public Map<String, Object> getData() {
+        return data;
+    }
+
 }
