@@ -9,30 +9,25 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@Api("用户接口")
 @RestController
 @RequestMapping("/user")
+@Api("用户接口")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @ApiOperation("添加后台管理员")
     @PostMapping("/insertBgAdmin")
+    @ApiOperation("添加后台管理员")
     public ResultBody insertBgAdmin(@ApiParam("管理员后台信息") @RequestBody User user) {
         userService.insertBgAdmin(user);
         return ResultBody.ok();
     }
 
+    @PostMapping("/insertUser")
     @ApiOperation("添加普通用户")
-    @GetMapping("/insertUser")
     public ResultBody insertUser(@ApiParam("用户信息") @RequestBody User user) {
         userService.insertUser(user);
-        return ResultBody.ok();
-    }
-
-    @GetMapping("/test")
-    public ResultBody test() {
         return ResultBody.ok();
     }
 

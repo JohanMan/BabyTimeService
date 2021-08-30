@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.johan.*"})
 @MapperScan("com.johan.service.member.dao")
-@ComponentScan("com.johan")
 @EnableTransactionManagement
 public class MemberApplication {
 
