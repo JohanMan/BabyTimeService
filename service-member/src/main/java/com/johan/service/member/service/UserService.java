@@ -16,4 +16,11 @@ public interface UserService {
      */
     void insertUser(User user);
 
+    /**
+     * 通过手机号查找用户
+     * @param mobile 手机号
+     * @return 用户信息
+     */
+    User findByMobile(String mobile);
+
 }

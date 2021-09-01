@@ -5,9 +5,19 @@ import java.util.Map;
 
 public class ResultBody {
 
+    // 成功码
     public static final int CODE_OK = 200;
-    public static final int CODE_ERROR = 201;
+    // 成功信息
     public static final String MESSAGE_OK = "success";
+
+    // 通用错误码
+    public static final int CODE_ERROR = 201;
+    // 未登录错误码
+    public static final int CODE_USER_NOT_LOGIN = 101;
+    // 用户不存在错误码
+    public static final int CODE_USER_ACCOUNT_NOT_EXIST = 102;
+    // 密码错误错误码
+    public static final int CODE_USER_ACCOUNT_PASSWORD = 103;
 
     private int code;
     private String message;

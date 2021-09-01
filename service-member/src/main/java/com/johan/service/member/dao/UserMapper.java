@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserMapper {
+    User selectByMobile(String mobile);
+
     int deleteByPrimaryKey(String uid);
 
     int insert(User record);

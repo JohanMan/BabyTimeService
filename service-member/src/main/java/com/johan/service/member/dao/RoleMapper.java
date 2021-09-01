@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RoleMapper {
+    Role selectByUserId(String userId);
+
     int deleteByPrimaryKey(Integer rid);
 
     int insert(Role record);

@@ -1,5 +1,7 @@
 package com.johan.service.member.service;
 
+import com.johan.service.member.entity.Role;
+
 public interface RoleService {
 
     // 管理员
@@ -10,5 +12,12 @@ public interface RoleService {
     int ROLE_VIP = 3;
     // 会员
     int ROLE_USER = 4;
+
+    /**
+     * 通过用户ID查找角色
+     * @param userId 用户ID
+     * @return 角色
+     */
+    Role findByUserId(String userId);
 
 }

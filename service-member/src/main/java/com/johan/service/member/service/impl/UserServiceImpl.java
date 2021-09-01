@@ -57,4 +57,9 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public User findByMobile(String mobile) {
+        return userMapper.selectByMobile(mobile);
+    }
+
 }

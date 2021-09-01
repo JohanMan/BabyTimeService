@@ -15,14 +15,14 @@ public class Role {
     private Integer rid;
 
     /**
-     * 角色等级
-     */
-    private Byte roleLevel;
-
-    /**
      * 角色名称
      */
     private String roleName;
+
+    /**
+     * 角色信息
+     */
+    private String roleMessage;
 
     /**
      * 创建时间
@@ -42,20 +42,20 @@ public class Role {
         this.rid = rid;
     }
 
-    public Byte getRoleLevel() {
-        return roleLevel;
-    }
-
-    public void setRoleLevel(Byte roleLevel) {
-        this.roleLevel = roleLevel;
-    }
-
     public String getRoleName() {
         return roleName;
     }
 
     public void setRoleName(String roleName) {
         this.roleName = roleName == null ? null : roleName.trim();
+    }
+
+    public String getRoleMessage() {
+        return roleMessage;
+    }
+
+    public void setRoleMessage(String roleMessage) {
+        this.roleMessage = roleMessage;
     }
 
     public Date getCreateTime() {
@@ -73,4 +73,5 @@ public class Role {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
 }

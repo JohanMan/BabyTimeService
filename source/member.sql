@@ -15,16 +15,16 @@ INSERT `t_user` (`uid`, `password`, `nick_name`) VALUES ('1000000000000000000', 
 
 CREATE TABLE `t_role` (
   `rid` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT '角色id',
-  `role_level` tinyint(1) NOT NULL DEFAULT '0' COMMENT '角色等级',
   `role_name` varchar(32) DEFAULT '' COMMENT '角色名称',
+  `role_message` varchar(32) DEFAULT '' COMMENT '角色信息',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间'
 ) ENGINE=InnoDB CHARSET=utf8 COMMENT='角色表';
 
-INSERT `t_role` (`role_level`, `role_name`) VALUES (1, '管理员');
-INSERT `t_role` (`role_level`, `role_name`) VALUES (2, '后台管理员');
-INSERT `t_role` (`role_level`, `role_name`) VALUES (3, 'VIP会员');
-INSERT `t_role` (`role_level`, `role_name`) VALUES (4, '会员');
+INSERT `t_role` (`role_name`, `role_message`) VALUES ('ROLE_ADMIN', '管理员');
+INSERT `t_role` (`role_name`, `role_message`) VALUES ('ROLE_BG_ADMIN', '后台管理员');
+INSERT `t_role` (`role_name`, `role_message`) VALUES ('ROLE_VIP', 'VIP会员');
+INSERT `t_role` (`role_name`, `role_message`) VALUES ('ROLE_USER', '会员');
 
 CREATE TABLE `t_user_role` (
   `id` char(19) NOT NULL PRIMARY KEY COMMENT 'id',
