@@ -13,11 +13,9 @@ public class ResultBody {
     // 通用错误码
     public static final int CODE_ERROR = 201;
     // 未登录错误码
-    public static final int CODE_USER_NOT_LOGIN = 101;
-    // 用户不存在错误码
-    public static final int CODE_USER_ACCOUNT_NOT_EXIST = 102;
-    // 密码错误错误码
-    public static final int CODE_USER_ACCOUNT_PASSWORD = 103;
+    public static final int CODE_NOT_LOGIN = 101;
+    // 没有权限错误码
+    public static final int CODE_NOT_PERMISSION = 102;
 
     private int code;
     private String message;

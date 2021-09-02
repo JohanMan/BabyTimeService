@@ -10,9 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
 
-@Service("webUserDetailsService")
 public class WebUserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
@@ -25,7 +23,7 @@ public class WebUserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userService.findByMobile(username);
         if (user == null) {
-            throw new GlobalException(ResultBody.CODE_USER_ACCOUNT_NOT_EXIST, "用户不存在");
+            throw new GlobalException("用户不存在");
         }
         Role role = roleService.findByUserId(user.getUid());
         return new WebUserDetail(user, role);
