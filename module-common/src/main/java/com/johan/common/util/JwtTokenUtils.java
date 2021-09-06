@@ -14,6 +14,9 @@ import java.util.Map;
 @PropertySource("classpath:jwt.properties")
 public class JwtTokenUtils {
 
+    @Value("${jwt.header}")
+    private String header;
+
     @Value("${jwt.secret}")
     private String secret;
 
@@ -108,6 +111,15 @@ public class JwtTokenUtils {
             System.out.println(e.getMessage());
         }
         return true;
+    }
+
+    /**
+     * 获取header的token字段
+     *
+     * @return token字段
+     */
+    public String getHeader() {
+        return header;
     }
 
 }
