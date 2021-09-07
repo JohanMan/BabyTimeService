@@ -2,6 +2,7 @@ package com.johan.service.member.controller;
 
 import com.johan.common.entity.ResultBody;
 import com.johan.common.utils.JwtTokenUtil;
+import com.johan.common.utils.RedisUtil;
 import com.johan.service.member.entity.User;
 import com.johan.service.member.entity.request.LoginData;
 import com.johan.service.member.service.UserService;
@@ -35,6 +36,9 @@ public class UserController {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
+    @Autowired
+    private RedisUtil redisUtil;
+
     @ApiOperation("添加后台管理员")
     @PostMapping("/insertBgAdmin")
     public ResultBody insertBgAdmin(@ApiParam("管理员后台信息") @RequestBody User user) {
@@ -52,6 +56,7 @@ public class UserController {
     @ApiOperation("登录")
     @PostMapping("/login")
     public ResultBody login(@RequestBody LoginData loginData, HttpServletRequest request) {
+        redisUtil.set("babykey", "123456");
         UserDetails userDetails = userDetailsService.loadUserByUsername(loginData.getUsername());
         if (userDetails == null) {
             return ResultBody.error("用户名/密码错误");
