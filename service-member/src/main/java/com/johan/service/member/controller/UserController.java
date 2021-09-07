@@ -56,7 +56,6 @@ public class UserController {
     @ApiOperation("登录")
     @PostMapping("/login")
     public ResultBody login(@RequestBody LoginData loginData, HttpServletRequest request) {
-        redisUtil.set("babykey", "123456");
         UserDetails userDetails = userDetailsService.loadUserByUsername(loginData.getUsername());
         if (userDetails == null) {
             return ResultBody.error("用户名/密码错误");
