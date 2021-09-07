@@ -1,4 +1,4 @@
-package com.johan.service.member.config;
+package com.johan.service.member.security;
 
 import com.johan.service.member.entity.Role;
 import com.johan.service.member.entity.User;

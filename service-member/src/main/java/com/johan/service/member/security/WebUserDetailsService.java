@@ -1,4 +1,4 @@
-package com.johan.service.member.config;
+package com.johan.service.member.security;
 
 import com.johan.service.member.entity.Role;
 import com.johan.service.member.entity.User;
@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service("userDetailsService")
-public class WebUserDetailsServiceImpl implements UserDetailsService {
+public class WebUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UserService userService;

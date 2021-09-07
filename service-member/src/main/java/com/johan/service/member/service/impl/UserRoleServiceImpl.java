@@ -1,6 +1,6 @@
 package com.johan.service.member.service.impl;
 
-import com.johan.common.util.SnowFlake;
+import com.johan.common.utils.SnowFlake;
 import com.johan.service.member.dao.UserRoleMapper;
 import com.johan.service.member.entity.UserRole;
 import com.johan.service.member.service.UserRoleService;

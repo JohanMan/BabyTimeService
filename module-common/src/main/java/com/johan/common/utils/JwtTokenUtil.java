@@ -1,18 +1,16 @@
-package com.johan.common.util;
+package com.johan.common.utils;
 
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.logging.Logger;
 
 @Component
 @PropertySource("classpath:jwt.properties")
-public class JwtTokenUtils {
+public class JwtTokenUtil {
 
     @Value("${jwt.header}")
     private String header;
@@ -28,6 +26,8 @@ public class JwtTokenUtils {
 
     private static final String ROLE = "role";
 
+    private Logger logger = Logger.getLogger("Text");
+
     /**
      * 创建Token
      *
@@ -39,7 +39,7 @@ public class JwtTokenUtils {
         Map<String, Object> map = new HashMap<>();
         map.put(ROLE, role);
         return Jwts.builder()
-                .signWith(SignatureAlgorithm.HS512, username)
+                .signWith(SignatureAlgorithm.HS512, secret)
                 .setClaims(map)
                 .setIssuer(iss)
                 .setSubject(username)

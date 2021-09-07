@@ -1,7 +1,7 @@
 package com.johan.service.member.service.impl;
 
 import com.johan.common.entity.GlobalException;
-import com.johan.common.util.SnowFlake;
+import com.johan.common.utils.SnowFlake;
 import com.johan.service.member.dao.UserMapper;
 import com.johan.service.member.entity.User;
 import com.johan.service.member.service.RoleService;

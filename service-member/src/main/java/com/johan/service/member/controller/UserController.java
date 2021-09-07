@@ -1,7 +1,7 @@
 package com.johan.service.member.controller;
 
 import com.johan.common.entity.ResultBody;
-import com.johan.common.util.JwtTokenUtils;
+import com.johan.common.utils.JwtTokenUtil;
 import com.johan.service.member.entity.User;
 import com.johan.service.member.entity.request.LoginData;
 import com.johan.service.member.service.UserService;
@@ -33,7 +33,7 @@ public class UserController {
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
-    private JwtTokenUtils jwtTokenUtils;
+    private JwtTokenUtil jwtTokenUtil;
 
     @ApiOperation("添加后台管理员")
     @PostMapping("/insertBgAdmin")
@@ -63,8 +63,13 @@ public class UserController {
                 new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
         authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-        String token = jwtTokenUtils.createToken(userDetails.getUsername(), StringUtils.join(userDetails.getAuthorities(), ","));
-        return ResultBody.ok().setData(jwtTokenUtils.getHeader(), token);
+        String token = jwtTokenUtil.createToken(userDetails.getUsername(), StringUtils.join(userDetails.getAuthorities(), ","));
+        return ResultBody.ok().setData(jwtTokenUtil.getHeader(), token);
+    }
+
+    @GetMapping("/test")
+    public ResultBody test() {
+        return ResultBody.ok();
     }
 
 }

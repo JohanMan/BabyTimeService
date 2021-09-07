@@ -1,4 +1,4 @@
-package com.johan.service.member.config;
+package com.johan.service.member.security;
 
 import com.alibaba.fastjson.JSON;
 import com.johan.common.entity.ResultBody;

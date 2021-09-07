@@ -1,4 +1,4 @@
-package com.johan.common.util;
+package com.johan.common.utils;
 
 public class SnowFlake {
 
