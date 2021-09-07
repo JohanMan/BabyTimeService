@@ -1,6 +1,6 @@
 package com.johan.common.config;
 
-import com.johan.common.util.SnowFlake;
+import com.johan.common.utils.SnowFlake;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
