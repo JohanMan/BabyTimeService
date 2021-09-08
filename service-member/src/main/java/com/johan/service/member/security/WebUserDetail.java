@@ -13,10 +13,12 @@ import java.util.List;
 public class WebUserDetail implements UserDetails {
 
     private User user;
+    private Role role;
     private List<GrantedAuthority> grantedAuthorities;
 
     public WebUserDetail(User user, Role role) {
         this.user = user;
+        this.role = role;
         this.grantedAuthorities = new ArrayList<>();
         if (role != null) {
             GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(role.getRoleName());
@@ -57,6 +59,14 @@ public class WebUserDetail implements UserDetails {
     @Override
     public boolean isEnabled() {
         return user.getIsDisabled() == 0;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Role getRole() {
+        return role;
     }
 
 }

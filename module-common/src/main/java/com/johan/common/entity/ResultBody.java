@@ -1,8 +1,5 @@
 package com.johan.common.entity;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class ResultBody {
 
     // 成功码
@@ -19,7 +16,7 @@ public class ResultBody {
 
     private int code;
     private String message;
-    private Map<String, Object> data;
+    private Object data;
 
     public ResultBody setCode(int code) {
         this.code = code;
@@ -31,16 +28,8 @@ public class ResultBody {
         return this;
     }
 
-    public ResultBody setData(Map<String, Object> data) {
+    public ResultBody setData(Object data) {
         this.data = data;
-        return this;
-    }
-
-    public ResultBody setData(String key, Object value) {
-        if (data == null) {
-            data = new HashMap<>();
-        }
-        data.put(key, value);
         return this;
     }
 
@@ -73,7 +62,7 @@ public class ResultBody {
         return message;
     }
 
-    public Map<String, Object> getData() {
+    public Object getData() {
         return data;
     }
 

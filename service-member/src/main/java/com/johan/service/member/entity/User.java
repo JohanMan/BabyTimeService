@@ -1,5 +1,6 @@
 package com.johan.service.member.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Date;
  * @author Johan
  * @date 2021/08/27
  */
-public class User {
+public class User implements Serializable {
     /**
      * 用户id
      */

@@ -1,6 +1,8 @@
 package com.johan.service.member.service;
 
 import com.johan.service.member.entity.User;
+import com.johan.service.member.entity.request.LoginRequestData;
+import com.johan.service.member.entity.response.LoginRespondData;
 
 public interface UserService {
 
@@ -22,5 +24,12 @@ public interface UserService {
      * @return 用户信息
      */
     User findByMobile(String mobile);
+
+    /**
+     * 登录
+     * @param data 登录参数
+     * @return 结果
+     */
+    LoginRespondData login(LoginRequestData data);
 
 }
